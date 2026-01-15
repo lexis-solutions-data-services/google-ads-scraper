@@ -1,154 +1,73 @@
-# Google Ads Scraper
+# n8n-nodes-google-ad-scraper
 
-![banner](https://lexis-solutions-apify.fra1.cdn.digitaloceanspaces.com/google-ads/bg.svg)
+An n8n community node that integrates the [Apify Google Ads Scraper](https://apify.com/lexis-solutions/google-ads-scraper) Actor directly into your n8n workflows.
 
-## What is the Google Ads Scraper?
+This node enables you to extract advertising data from Google's Ads Transparency Center, providing access to comprehensive information about text, image, and video advertisements. Retrieve details such as headlines, descriptions, geographic targeting, impression metrics, and associated media assets.
 
-## 📊 Actor Stats
+[n8n](https://n8n.io/) is an open-source, [fair-code licensed](https://docs.n8n.io/reference/license/) workflow automation platform that empowers you to automate your business processes.
 
-| Stat | Value |
-|------|-------|
-| **Version** | `3.1.2` |
-| **Last Update** | Nov 30, 2025 |
+## Table of Contents
 
----
+- [Installation](#installation)
+- [Operations](#operations)
+- [Credentials](#credentials)
+- [Usage](#usage)
+- [Input Parameters](#input-parameters)
+- [Output](#output)
 
+## Installation
 
+Install this community node by following the official [n8n community nodes installation guide](https://docs.n8n.io/integrations/community-nodes/installation/).
 
-The Google Ads Scraper is designed to extract data from Google's Ads Transparency Center. It enables users to gather information about ads displayed on Google's advertising network, focusing on transparency and the details of advertisers. Users can search Google ads by company, domain, or country, and filter ads by date range and format.
+## Operations
 
-<p align="center">
-  <img src="https://apify-image-uploads-prod.s3.amazonaws.com/3Y5oM7ystipacxama/HHimiwBK83pjG6Yzb-adwords.png" alt="Google Ads Scraper (2X Faster, More Data)" style="height: 60px; margin-right: 15px;" /><a href="https://apify.com/lexis-solutions/google-ads-scraper" target="_blank">
-    <img src="https://img.shields.io/badge/Try%20it%20on-Apify-0066FF?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDA4IiBoZWlnaHQ9IjQwOCIgdmlld0JveD0iMCAwIDQwOCA0MDgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxnIGNsaXAtcGF0aD0idXJsKCNjbGlwMF8zNDFfNDE1NykiPgo8cGF0aCBkPSJNMjE4LjY5NSAxMDRIMzAwLjk3QzMwMi42NDMgMTA0IDMwNCAxMDUuMzU3IDMwNCAxMDcuMDNWMjMyLjc2NkMzMDQgMjM1Ljc3OCAzMDAuMDgzIDIzNi45NDUgMjk4LjQzNCAyMzQuNDI1TDIxNi4xNTkgMTA4LjY5QzIxNC44NDEgMTA2LjY3NCAyMTYuMjg3IDEwNCAyMTguNjk1IDEwNFoiIGZpbGw9IndoaXRlIi8+CjxwYXRoIGQ9Ik0xODkuMzA1IDEwNEgxMDcuMDNDMTA1LjM1NyAxMDQgMTA0IDEwNS4zNTcgMTA0IDEwNy4wM1YyMzIuNzY2QzEwNCAyMzUuNzc4IDEwNy45MTcgMjM2Ljk0NSAxMDkuNTY2IDIzNC40MjVMMTkxLjg0IDEwOC42OUMxOTMuMTU5IDEwNi42NzQgMTkxLjcxMyAxMDQgMTg5LjMwNSAxMDRaIiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNMjAyLjU5MSAyMDQuNjY4TDEwOS4xMjcgMjk4LjgzNUMxMDcuMjI5IDMwMC43NDcgMTA4LjU4MyAzMDQgMTExLjI3OCAzMDRIMjk2LjhDMjk5LjQ4MyAzMDQgMzAwLjg0MiAzMDAuNzcgMjk4Ljk2NyAyOTguODUyTDIwNi45MDggMjA0LjY4NUMyMDUuNzI2IDIwMy40NzUgMjAzLjc4MiAyMDMuNDY4IDIwMi41OTEgMjA0LjY2OFoiIGZpbGw9IndoaXRlIi8+CjwvZz4KPGRlZnM+CjxjbGlwUGF0aCBpZD0iY2xpcDBfMzQxXzQxNTciPgo8cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0id2hpdGUiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEwNCAxMDQpIi8+CjwvY2xpcFBhdGg+CjwvZGVmcz4KPC9zdmc+Cg==&logoColor=white" alt="Try it on Apify" style="border-radius: 12px; height: 60px;" />
-  </a>
-</p>
+The **Apify Google Ads Scraper** node connects to Apify's cloud platform and executes the Google Ads Scraper Actor. Simply configure your input parameters—including start URLs, scraping limits, and optional settings—and the node will orchestrate the entire scraping process to gather Google Ads data.
 
+### Capabilities
 
-🆕 This actor now scrapes all formats of ads on Google Ads - images, videos, and text.
+- **Seamless execution**: Automatically runs the Actor using your configured parameters
+- **Progress tracking**: Monitors the scraping job in real-time and reports completion status
+- **Data collection**: Retrieves all scraped results and formats them for use in your workflow
+- **Robust error handling**: Delivers comprehensive error information when issues occur
 
-- 🎥 Watch the [video tutorial](https://www.youtube.com/watch?v=nK_x32d-bcU) on Scraping Google Ads with this actor
+The node manages the complete scraping lifecycle: initiating the Actor run, waiting for completion, and fetching all results automatically.
 
-## 🔄 Comparison: Lexis vs Competitor
+## Credentials
 
-| Feature                                | Competitor         | Lexis Scraper          |
-| -------------------------------------- | ------------------ | ---------------------- |
-| Avg Speed (100 ads)                    | 81s                | **39s** 🚀             |
-| Ad formats                             | Text, Image, Video | Text, Image, Video     |
-| Media download                         | ✅                 | ✅                     |
-| `url` (full ad link)                   | ❌                 | ✅                     |
-| `firstShownAt` (first launch date)     | ❌                 | ✅                     |
-| `audienceSelections` (target audience) | ❌                 | ✅                     |
-| Age-restricted ads                     | ❌                 | ✅                     |
-| Reliability                            | Occasional gaps    | **Error-free runs** ✅ |
+This node requires an Apify API Key for authentication.
 
-# Features
+**Obtaining your API Key**: Create an account at the [Apify Console](https://console.apify.com/) and retrieve your API token from the settings.
 
-- ⚡ 2× faster than competitor scrapers – scrape 100 ads in just 39 seconds
-- Scrapes all ad formats: TEXT, IMAGE, and VIDEO
-- Extracts variants with decoded ad text and media links
-- Per-country impression ranges and per-platform impression stats
-- Audience selections with include/exclude flags
-- Optional media downloading to Key-Value Store with stored keys in output
-- Cookie support to unlock restricted content
-- Proxy support for geo-targeted results
-- Supports both search URLs and direct creative detail URLs
-- Pagination with `maxItems` control
+**Setup Steps**:
 
-✨ Exclusive fields you won’t find in competitor scrapers:
+1. Visit [Apify Console](https://console.apify.com/)
+2. Sign in or register for a new account
+3. Open Settings → Integrations
+4. Copy your API token
+5. Add the token as credentials in the n8n node configuration
 
-- url → full ad link
-- firstShownAt → when the ad was first launched
-- audienceSelections → target audience info
+## Usage
 
-## What data can the Google Ads Scraper extract?
+**Getting Started**:
 
-The Google Ads Scraper can extract the following data from the Ads Transparency Center:
+1. **Insert the node** into your n8n workflow canvas
+2. **Authenticate** by providing your Apify API key credentials
+3. **Configure inputs** specifying which Google Ads data you want to collect
+4. **Execute** your workflow to begin data extraction
 
-- Advertiser name
-- Advertiser ID
-- Creative ID (Ad ID)
-- Format (TEXT, IMAGE, VIDEO)
-- Detail URL
-- Preview URL (primary media link)
-- First shown date
-- Last shown date
-- Impressions (range, if available)
-- Shown countries
-- Country stats (per country first/last shown, impression bounds)
-- Platform stats per country (YouTube, Shopping, Search, with impression bounds)
-- Audience selections (targeting categories; included/excluded flags)
-- Variants (extracted ad text and media/video/image links)
-- Origin URL (the source Transparency Center search URL)
+### Input Parameters
 
-## What use cases does the Google Ads Scraper have?
+Comprehensive parameter documentation is available in the [Apify Google Ads Scraper Actor documentation](https://apify.com/lexis-solutions/google-ads-scraper).
 
-- 👀 Competitive analysis
-- 💻 Market research
-- 📊 Data journalism
-- 📈 Marketing agencies tracking competitor ads
-- 🎨 Creative teams analyzing ad media & formats
-- 🕵️‍♂️ Compliance teams monitoring ad transparency
+#### Available Parameters
 
-## How to use the Google Ads Scraper
+- **startUrls** (array, required): Collection of Google Transparency Center URLs to process
+- **maxItems** (integer, optional): Limit on the number of ads to scrape (default: 100)
+- **downloadMedia** (boolean, optional): Enable downloading media files to Key-Value Store (default: false)
+- **cookies** (array, optional): Browser cookies in JSON format for accessing restricted content
+- **proxyConfiguration** (object, optional): Proxy settings for location-based targeting
 
-1. Create a free Apify account
-2. Open Google Ads Scraper
-3. Add one or more Google Transparency Center URLs to the input
-4. Click Start and wait for the results
-5. Download the results in JSON, XML or CSV format or connect the actor to your backend via API
-
-## ⚠️ Note on Ad Visibility
-
-The number of ads retrieved depends on two key factors:
-
-- ✅ **Authentication** – Use cookies from a logged-in Google account (preferably a test account) to access age-restricted or personalized ads. Never share your cookies to protect your privacy.
-- 🌍 **Location (IP-based)** – Google shows different ads based on your region. To fetch ads from a specific country, use a proxy for that region.
-
-Example proxy config for US:
-
-```json
-{
-  "proxyConfiguration": {
-    "useApifyProxy": true,
-    "apifyProxyGroups": ["US"]
-  }
-}
-```
-
-> Here is how you can integrate your cookies:
->
-> 1. Install the [**Cookie-Editor** Chrome extension](https://chromewebstore.google.com/detail/cookie-editor/hlkenndednhfkekhgcdicdfddnkalmdm?pli=1).
-> 2. Go to [Google Ads Transparency Center](https://adstransparency.google.com).
-> 3. Open the **Cookie-Editor** extension and **export your cookies** in **JSON format**.
-> 4. Copy the exported cookie data and **paste it into the input field** provided here.
->    <img src="https://i.ibb.co/qLBF3mBk/cookies-1.png" alt="Example 1" width="300" /> <img src="https://i.ibb.co/5xrzXL9R/cookies-2.png" alt="Example 2" width="300" /> <img src="https://i.ibb.co/Ld5FCNSM/cookies-3.png" alt="Example 3" width="250" />
-
-## 📥 Input
-
-To run the actor, you'll need at least one Google Transparency Center URL.
-
-Opening the [Google Transparency Center](https://adstransparency.google.com/) in your browser, you can see a search form like below.
-
-![banner](https://lexis-solutions-apify.fra1.cdn.digitaloceanspaces.com/google-ads/form.png)
-
-Here you can use the search form to filter the ads by:
-
-1. Dates - the date range when the ad was shown
-2. Countries - the countries where the ad was shown
-3. Format - the format of the ad (text, image, video)
-4. Advertiser - the name of the advertiser, or the domain of the advertiser's website
-
-Once you've set up the search form, click enter, and the URL in your browser will change. Copy this URL and paste it into the input field in the actor.
-
-Sample URLs you can use:
-
-- https://adstransparency.google.com/advertiser/AR09717407487665111041?region=anywhere - all ads from the advertiser "Facebook Technologies LLC", shown anywhere in the world, in any format, in any date range
-
-- https://adstransparency.google.com/advertiser/AR09717407487665111041?region=DE&preset-date=Last+7+days&format=TEXT - all text ads from the advertiser "Facebook Technologies LLC", shown in Germany, in the last 7 days
-
-- https://adstransparency.google.com/?region=anywhere&domain=facebook.com - all ads from Facebook domain
-
-### 📥 Sample Input
+#### Example Input Configuration
 
 ```json
 {
@@ -157,24 +76,18 @@ Sample URLs you can use:
       "url": "https://adstransparency.google.com/advertiser/AR07117872862404280321?region=US&start-date=2025-05-22&end-date=2025-05-22"
     }
   ],
-  "cookies": [], // (NOT REQUIRED) used to retreive more data (age-restriction content)
+  "cookies": [],
   "maxItems": 40,
   "downloadMedia": false,
-  "proxyConfiguration": { "useApifyProxy": true }
+  "proxyConfiguration": {
+    "useApifyProxy": true
+  }
 }
 ```
 
-## 📥 Input schema
+### Output
 
-- startUrls (array of { url: string }) – required
-- cookies (array) – optional; JSON from Cookie-Editor
-- maxItems (integer) – optional; default 100
-- proxyConfiguration (object) – optional; Apify proxy settings
-- downloadMedia (boolean) – optional; default false. When true, media is downloaded to KV Store and keys are returned in `media-store`
-
-## 📤 Output
-
-The results are stored in the default dataset associated with the actor. Each item is an ad, having the following format:
+Results are returned as an array of ad objects. Each item represents a single advertisement with the following structure:
 
 ```json
 {
@@ -258,68 +171,43 @@ The results are stored in the default dataset associated with the actor. Each it
 }
 ```
 
-## How many Google Ads can the Google Ads Scraper extract?
+## Data Fields Explained
 
-The Google Ad Transparency Center Scraper uses pagination to extract all job listings from Google Ad Transparency Center. You can control the number of job listings to scrape by setting the `maxItems` input parameter. If you don't set the `maxItems` parameter, the scraper will extract all job listings available on the website.
+The scraper extracts a wide range of advertising intelligence:
 
-## Why use the Google Ads Scraper?
+- **Advertiser details**: Company name and unique identifier
+- **Creative information**: Ad ID, format type (TEXT/IMAGE/VIDEO), and URLs
+- **Performance metrics**: Impression counts with upper and lower bounds
+- **Geographic insights**: Countries where ads were displayed with per-country statistics
+- **Platform breakdown**: Separate metrics for YouTube, Google Shopping, and Google Search
+- **Audience targeting**: Detailed targeting criteria with inclusion/exclusion flags
+- **Ad variants**: Multiple versions with text content and media links
+- **Temporal data**: First and last shown timestamps
 
-- ⚡️ **Fast** - The scraper is fast and efficient, allowing you to scrape ads in a programmatic way.
+## Common Use Cases
 
-- 🤙 **Easy to use** - The scraper is easy to use and requires no coding knowledge. All you need to do is input the companies you want to scrape and the scraper will do the rest.
+- **Competitive intelligence**: Track and analyze competitor advertising strategies
+- **Market analysis**: Research advertising trends and creative patterns
+- **Investigative reporting**: Leverage transparency data for journalism
+- **Agency operations**: Monitor client and competitor ad campaigns
+- **Creative benchmarking**: Study ad formats, media, and messaging approaches
+- **Regulatory compliance**: Verify ad transparency and adherence to regulations
 
-- ☑️ **Well-Maintained** - The scraper is maintained by the Lexis Solutions team, ensuring that it is always up-to-date and working properly.
+## Important Considerations
 
-## FAQ
+- **Visibility factors**: The quantity of ads retrieved is influenced by authentication (cookies) and geographic location (IP address)
+- **Cookie authentication**: Use cookies from an authenticated Google account to access age-restricted or personalized advertisements
+- **Geographic targeting**: Configure proxy settings to retrieve ads specific to certain regions
+- **Format support**: The scraper handles all three ad formats: text, image, and video
 
-- **How to find a company's ads on Google?**
+## Getting Help
 
-  To find a company's ads on Google, you can use the Google Ads Transparency Center. This tool allows you to search for ads by advertiser name, domain, or country.
+For assistance, documentation, or feature requests:
 
-- **How to search for ads on Google?**
+- Consult the [Apify Google Ads Scraper Actor documentation](https://apify.com/lexis-solutions/google-ads-scraper)
+- Explore the [n8n community nodes documentation](https://docs.n8n.io/integrations/community-nodes/)
+- Reach out to Lexis Solutions: [scraping@lexis.solutions](mailto:scraping@lexis.solutions)
 
-  Google Ads Transparency Center allows you to search for ads by advertiser name, domain, or country. You can also filter ads by date range and format. If you need to obtain the data programmatically, you can use the Google Ads Scraper.
+## License
 
-- **What is the Google Ads Transparency Center?**
-
-  The Google Ads Transparency Center is a website that allows users to view ads that are displayed on Google's advertising network. It also provides information about the advertisers who are running these ads.
-
-- **What is the Google Ads Scraper?**
-
-  The Google Ads Scraper is a web scraping tool designed specifically for Google's Ads Transparency Center. This tool offers an effective way to mine valuable data from ads displayed on Google's advertising network.
-
-- **Is Scraping Google Ads Legal?**
-
-  Scraping public information from Google's Ads Transparency Center is legal as long as you are not violating any terms of service or privacy policies. However, it is important to note that scraping ads can be considered a violation of the terms of service of some websites, so it is always best to check before scraping.
-
-- **How much does it cost?**
-
-  The cost for using the Google Ads Scraper is shown on the top of this page. You can also check the Apify Store page for more information.
-
-## Need to scrape ads from Bing?
-
-👉 Scrape Bing ads with [Bing Ads Scraper](https://apify.com/lexis-solutions/bing-ads-scraper)
-
-## Need to scrape ads from TikTok?
-
-👉 Scrape TikTok ads with [TikTok Ads Scraper](https://apify.com/lexis-solutions/tiktok-ads-scraper)
-
-## Need to scrape ads from Reddit?
-
-👉 Scrape Reddit ads with [Reddit Ads Scraper](https://apify.com/lexis-solutions/reddit-ads-scraper)
-
----
-
-👀 p.s.
-
-Got feedback or need an extension?
-
-Lexis Solutions is a [certified Apify Partner](https://apify.com/partners/find). We can help you with custom solutions or data extraction projects.
-
-Contact us over [Email](mailto:scraping@lexis.solutions) or [LinkedIn](https://www.linkedin.com/company/lexis-solutions)
-
-## Support Our Work 💝
-
-If you're happy with our work and scrapers, you're welcome to leave us a company review [here](https://apify.com/partners/find/lexis-solutions/review) and leave a review for the scrapers you're subscribed to. It will take you less than a minute but it will mean a lot to us!
-
-Image Credit: Google Transparency Center
+This community node is distributed as-is and adheres to n8n's community node licensing terms.
