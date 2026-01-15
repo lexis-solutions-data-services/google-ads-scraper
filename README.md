@@ -1,4 +1,4 @@
-# n8n-nodes-google-ads-scraper
+# n8n-nodes-google-ad-scraper
 
 An n8n community node that integrates the [Apify Google Ads Scraper](https://apify.com/lexis-solutions/google-ads-scraper) Actor directly into your n8n workflows.
 

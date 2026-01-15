@@ -7,8 +7,8 @@ export default [
 	// completely ignore all __tests__ folders
 	{
 		ignores: [
-			'**/__tests__/**', 
-			'nodes/ApifyContentCrawler/__tests__/**', 
+			'**/__tests__/**',
+			'nodes/ApifyContentCrawler/__tests__/**',
 			'scripts/**'
 		],
 	},
@@ -17,6 +17,13 @@ export default [
 	{
 		rules: {
 			'@typescript-eslint/no-explicit-any': 'off',
+		},
+	},
+	// allow non-SVG icons (use PNGs)
+	{
+		rules: {
+			'@n8n/community-nodes/icon-validation': 'off',
+			'n8n-nodes-base/node-class-description-icon-not-svg': 'off',
 		},
 	},
 ];
