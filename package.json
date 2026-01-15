@@ -1,6 +1,6 @@
 {
 	"name": "n8n-nodes-google-ad-scraper",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "n8n community node that integrates the Apify Google Ads Scraper Actor to extract advertising data from Google's Ads Transparency Center, including text, image, and video advertisements with details such as headlines, descriptions, geographic targeting, and impression metrics",
 	"keywords": [
 		"n8n-community-node-package",
